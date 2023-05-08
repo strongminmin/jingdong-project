@@ -123,7 +123,8 @@ export default {
         border-radius: .06rem;
 
         &__content {
-            line-height: .48rem;
+            margin-top: .12rem;
+            line-height: .22rem;
             background: none;
             width: 100%;
             border: none;

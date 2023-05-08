@@ -26,15 +26,15 @@
                 </div>
                 <div class="product__number">
                     <span
-                        class="product__number__minus"
+                        class="product__number__minus iconfont"
                         @click="() => { changeCartItem(shopId, item._id, item, -1, shopName)}"
-                        >-</span>
+                        >&#xe677;</span>
                         {{getProductCartCount(shopId, item._id)}}
                     <!-- {{cartList?.[shopId]?.productList?.[item._id]?.count || 0}} -->
                     <span
-                        class="product__number__plus"
+                        class="product__number__plus iconfont"
                         @click="()=>{changeCartItem(shopId, item._id, item, 1, shopName)}"
-                    >+</span>
+                    >&#xe845;</span>
                 </div>
             </div>
         </div>
@@ -205,26 +205,27 @@ export default {
         }
     }
     .product__number{
+        display: flex;
+        align-items: center;
         position: absolute;
-        bottom:.26rem;
+        bottom:.12rem;
         right: 0;
-        &__minus, &__plus{
-            display: inline-block;
-            width: .2rem;
-            height: .2rem;
-            line-height: .16rem;
-            border-radius: 50%;
-            font-size: .2rem;
-            text-align: center;
-        }
-        &__minus{
-            border: 1px solid $medium-fontColor;
+        line-height: .18rem;
+        // &__minus, &__plus{
+        //     display: inline-block;
+        //     width: .2rem;
+        //     height: .2rem;
+        //     line-height: .16rem;
+        //     // border-radius: 50%;
+        //     font-size: .2rem;
+        //     text-align: center;
+        // }
+        &__minus {
             color: $medium-fontColor;
             margin-right: .05rem;
         }
         &__plus{
-            background: $btn-bgColor;
-            color: $bgColor;
+            color: $btn-bgColor;
             margin-left: .05rem;
         }
     }

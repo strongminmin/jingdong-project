@@ -86,7 +86,6 @@ export default {
     line-height: .22rem;
     font-size: .16rem;
     @include ellipsis;
-    // border: 1px solid red;
 
     .position__icon {
       position: relative;
