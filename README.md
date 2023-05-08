@@ -1,4 +1,5 @@
 # jingdong-project
+这是一个仿京东商城的项目
 
 ## Project setup
 ```
