@@ -1,0 +1,14 @@
+/* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+  font-family: 'iconfont';  /* Project id 4011720 */
+  src: url('//at.alicdn.com/t/c/font_4011720_4jemvwg921k.woff2?t=1683180284856') format('woff2'),
+       url('//at.alicdn.com/t/c/font_4011720_4jemvwg921k.woff?t=1683180284856') format('woff'),
+       url('//at.alicdn.com/t/c/font_4011720_4jemvwg921k.ttf?t=1683180284856') format('truetype');
+}
+  .iconfont {
+    font-family: "iconfont" !important;
+    font-size: .16rem;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
