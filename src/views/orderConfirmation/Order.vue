@@ -138,7 +138,7 @@ export default {
 
     &__btn {
         width: .98rem;
-        background: #4FB0F9;
+        background: $iconColor;
         color: $bgColor;
         text-align: center;
     }
@@ -160,7 +160,7 @@ export default {
         transform: translate(-50%, -50%);
         width: 3rem;
         height: 1.56rem;
-        background: #fff;
+        background: $bgColor;
         border-radius: .04rem;
         text-align: center;
 
@@ -168,14 +168,14 @@ export default {
             margin: .24rem 0 0 0;
             line-height: .26rem;
             font-size: .18rem;
-            color: #333;
+            color: $content-font-color;
 
         }
 
         &__desc {
             margin: .08rem 0 0 0;
             font-size: .14rem;
-            color: #666;
+            color: $medium-fontColor;
         }
 
         &__btns {
@@ -192,14 +192,14 @@ export default {
 
             &--first {
                 margin-right: .12rem;
-                border: .01rem solid #4FB0F9;
-                color: #4FB0F9;
+                border: .01rem solid $iconColor;
+                color: $iconColor;
             }
 
             &--last {
                 margin-left: .12rem;
-                background: #4FB0F9;
-                color: #fff;
+                background: $iconColor;
+                color: $bgColor;
             }
         }
 

@@ -360,7 +360,7 @@ export default {
 
     &__btn {
         width: .98rem;
-        background-color: #4FB0F9;
+        background-color: $iconColor;
         text-align: center;
         // color: $bgColor;
         font-size: .14rem;
