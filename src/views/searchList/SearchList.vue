@@ -27,7 +27,7 @@ import { get } from '../../utils/request'
 import ShopInfo from '../../components/ShopInfo.vue'
 
 // 点击回退逻辑
-const useBackClickEffect = () => {
+const useBackRouterEffect = () => {
   const router = useRouter()
   const handleBackClick = () => {
     router.back()
@@ -53,7 +53,7 @@ export default {
     const route = useRoute()
     // 搜索关键词逻辑
     const keyword = ref(route.query.keyword || '')
-    const handleBackClick = useBackClickEffect()
+    const handleBackClick = useBackRouterEffect()
     const handleSearchInputChange = () => {
       getSearchList(keyword.value)
     }
@@ -83,7 +83,7 @@ export default {
         &__back {
             width: .3rem;
             font-size: .24rem;
-            color: #b6b6b6;
+            color: $backIconColor;
         }
 
         &__content {

@@ -1,12 +1,7 @@
 <template lang="">
     <div class="wrapper">
         <div class="title">
-          我的地址
-          <span class="title__create" >
-            <router-link to="AddressEdit">
-              新建
-            </router-link>
-          </span>
+          地址选择
         </div>
         <div class="empty" v-if="addressList.length === 0">暂无地址信息</div>
         <div class="address" v-if="addressList.length > 0">
@@ -21,18 +16,15 @@
               <span class="address__item__phone">{{address.phone}}</span>
             </p>
             <p class="address__item__address">{{address.city}}{{address.department}}{{address.houseNumber}}</p>
-            <div class="iconfont">&#xe8ef;</div>
           </div>
-
         </div>
     </div>
     <Docker :currentIndex = '3'/>
 </template>
 <script>
 import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { useRouter, useRoute } from 'vue-router'
 import { get } from '../../utils/request'
-import Docker from '../../components/Docker.vue'
 
 const useAddressListEffect = () => {
   const addressList = ref([])
@@ -47,14 +39,15 @@ const useAddressListEffect = () => {
 
 export default {
   name: 'Address',
-  components: { Docker },
   setup () {
     const router = useRouter()
+    const route = useRoute()
     const { addressList, getAddressList } = useAddressListEffect()
     getAddressList()
     const handleAddressClick = (id) => {
       // console.log(id)
-      router.push(`/addressEdit?id=${id}`)
+      const path = route.query.path
+      router.push(`${path}?addressId=${id}`)
     }
     return { addressList, handleAddressClick }
   }
@@ -66,12 +59,11 @@ export default {
 
 .wrapper {
   overflow-y: auto;
-  // position: absolute;
-  // left: 0;
-  // top: 0;
-  // bottom: .5rem;
-  // right: 0;
-  @include fix-content;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
   background: $darkBgColor;
   // padding: 0 .18rem .2rem .18rem;
   // background: green;
@@ -85,16 +77,6 @@ export default {
   // font-size: .16rem;
   // text-align: center;
   @include title;
-
-  &__create {
-    position: absolute;
-    right: .18rem;
-    font-size: .14rem;
-    color: $content-fontColor;
-    a {
-      color: $content-fontColor;
-    }
-  }
 }
 
 .address {
@@ -124,14 +106,6 @@ export default {
     &__address {
       margin: .08rem 0 0 0;
       color: $content-fontColor;
-    }
-    .iconfont{
-      transform: rotate(180deg);
-      position: absolute;
-      top: .44rem;
-      right: .16rem;
-      font-size: .2rem;
-      color: $light-fontColor;
     }
 
   }

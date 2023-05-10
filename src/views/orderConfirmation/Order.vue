@@ -1,7 +1,7 @@
 <template>
     <div class="order">
         <div class="order__price">实付金额 <b>￥{{ calculations.price }}</b></div>
-        <div class="order__btn" @click="handleShowConfirmChange(true)">提交订单</div>
+        <div class="order__btn" @click="handleShowConfirmChange(true)" v-show="showSubmitBtn">提交订单</div>
     </div>
     <div class="mask" v-show="showConfirm" @click="handleShowConfirmChange(false)">
         <div class="mask__content" @click.stop>
@@ -23,7 +23,7 @@ import { useCommonCartEffect } from '../../effects/cartEffects'
 import { useToastEffect } from '../../components/Toast.vue'
 
 // 下单相关逻辑
-const useMakeOrderEffect = (shopId, shopName, productList) => {
+const useMakeOrderEffect = (shopId, shopName, productList, addressId) => {
   const router = useRouter()
   const store = useStore()
   const { showToast } = useToastEffect()
@@ -38,7 +38,7 @@ const useMakeOrderEffect = (shopId, shopName, productList) => {
     // console.log(products)
     try {
       const result = await post('/api/order', {
-        addressId: 1,
+        addressId,
         shopId,
         shopName: shopName.value,
         isCanceled: isCanceled,
@@ -84,7 +84,7 @@ export default {
     //   showConfirm.value = status
     // }
     const { showConfirm, handleShowConfirmChange } = useShowConfirmChange()
-    const { handleConfirmOrder } = useMakeOrderEffect(shopId, shopName, productList)
+    const { handleConfirmOrder } = useMakeOrderEffect(shopId, shopName, productList, route.query.addressId)
 
     // const handleConfirmOrder = async (isCanceled) => {
     //   const products = []
@@ -114,7 +114,7 @@ export default {
     //     showToast('请求失败')
     //   }
     // }
-    return { calculations, showConfirm, handleConfirmOrder, handleShowConfirmChange }
+    return { showSubmitBtn: !!route.query.addressId, calculations, showConfirm, handleConfirmOrder, handleShowConfirmChange }
   }
 
 }

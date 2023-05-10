@@ -34,7 +34,7 @@ const useShopInfoEffect = () => {
 }
 
 // 点击回退逻辑
-const useBackClickEffect = () => {
+const useBackRouterEffect = () => {
   const router = useRouter()
   const handleBackClick = () => {
     router.back('Home')
@@ -48,7 +48,7 @@ export default {
   setup () {
     // console.log(route.params, route.name)
     const { data, getItemData } = useShopInfoEffect()
-    const { handleBackClick } = useBackClickEffect()
+    const { handleBackClick } = useBackRouterEffect()
     getItemData()
     const { item } = toRefs(data)
     return { item, handleBackClick }
@@ -67,7 +67,7 @@ export default {
     &__back{
         width: .3rem;
         font-size: .24rem;
-        color: #b6b6b6;
+        color: $backIconColor;
     }
     &__content{
         display: flex;
