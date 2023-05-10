@@ -200,7 +200,7 @@ export default {
         line-height: .52rem;
         border-bottom: .01rem solid $content-bgColor;
         font-size: .14rem;
-        color: $content-font-color;
+        color: $content-fontColor;
 
         &__all {
             width: .64rem;
@@ -254,7 +254,7 @@ export default {
             margin: 0;
             line-height: .2rem;
             font-size: .14rem;
-            color: $content-font-color;
+            color: $content-fontColor;
             @include ellipsis;
         }
 
@@ -348,7 +348,7 @@ export default {
 
     &__info {
         flex: 1;
-        color: $content-font-color;
+        color: $content-fontColor;
         font-size: .12rem;
 
         &__price {
@@ -367,7 +367,7 @@ export default {
 
         a {
             color: $bgColor;
-            text-decoration: none;
+            // text-decoration: none;
         }
     }
 }</style>

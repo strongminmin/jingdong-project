@@ -71,9 +71,9 @@ export default {
 .wrapper {
     padding: 0 .18rem;
 
-    a {
-        text-decoration: none;
-    }
+    // a {
+    //     text-decoration: none;
+    // }
 
     .search {
         display: flex;
@@ -107,10 +107,10 @@ export default {
                 outline: none;
                 background: none;
                 font-size: .14rem;
-                color: $content-font-color;
+                color: $content-fontColor;
 
                 &::placeholder {
-                    color: $content-font-color;
+                    color: $content-fontColor;
                 }
             }
         }

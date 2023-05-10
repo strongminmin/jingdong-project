@@ -111,7 +111,7 @@ export default createStore({
 
     clearCartData (state, payload) {
       const { shopId } = payload
-      state.cartList[shopId].productList = {}
+      delete state.cartList[shopId]
     }
   },
   actions: {

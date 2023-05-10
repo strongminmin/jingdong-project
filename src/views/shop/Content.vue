@@ -151,7 +151,7 @@ export default {
         line-height: .4rem;
         text-align: center;
         font-size: .14rem;
-        color: $content-font-color;
+        color: $content-fontColor;
         &--active{
             background: $bgColor;
         }
@@ -178,14 +178,14 @@ export default {
             margin: 0;
             line-height: .2rem;
             font-size: .14rem;
-            color: $content-font-color;
+            color: $content-fontColor;
             @include ellipsis;
         }
         &__sales{
             margin: .06rem 0;
             line-height: .16rem;
             font-size: .12rem;
-            color: $content-font-color;
+            color: $content-fontColor;
         }
         &__price {
             margin: 0;

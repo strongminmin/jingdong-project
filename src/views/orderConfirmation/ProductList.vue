@@ -49,7 +49,7 @@ export default {
     &__title {
         padding: .16rem;
         font-size: .16rem;
-        color: $content-font-color;
+        color: $content-fontColor;
     }
 
     &__wrapper {
@@ -85,7 +85,7 @@ export default {
             margin: 0;
             line-height: .2rem;
             font-size: .14rem;
-            color: $content-font-color;
+            color: $content-fontColor;
             @include ellipsis;
         }
 

@@ -46,6 +46,9 @@ const useMakeOrderEffect = (shopId, shopName, productList) => {
       })
       // console.log(result)
       if (result?.errno === 0) {
+        const cartList = JSON.parse(localStorage.cartList || {})
+        delete cartList[shopId]
+        localStorage.cartList = JSON.stringify(cartList)
         store.commit('clearCartData', { shopId })
         router.push({ name: 'OrderList' })
       } else {
@@ -133,7 +136,7 @@ export default {
     &__price {
         flex: 1;
         text-indent: .24rem;
-        color: $content-font-color;
+        color: $content-fontColor;
     }
 
     &__btn {
@@ -168,7 +171,7 @@ export default {
             margin: .24rem 0 0 0;
             line-height: .26rem;
             font-size: .18rem;
-            color: $content-font-color;
+            color: $content-fontColor;
 
         }
 

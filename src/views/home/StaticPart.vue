@@ -103,7 +103,7 @@ export default {
     font-size: .2rem;
   }
 
-  color: $content-font-color;
+  color: $content-fontColor;
 }
 
 .search {
@@ -157,7 +157,7 @@ export default {
     &__desc {
       padding: .06rem 0 .16rem 0;
       text-align: center;
-      color: $content-font-color;
+      color: $content-fontColor;
     }
 
   }

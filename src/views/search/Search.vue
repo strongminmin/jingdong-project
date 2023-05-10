@@ -118,7 +118,7 @@ export default {
         display: flex;
         line-height: .32rem;
         margin-top: .16rem;
-        color: $content-font-color;
+        color: $content-fontColor;
 
         .iconfont {
             position: absolute;
@@ -150,7 +150,7 @@ export default {
             margin: 0;
             font-size: .16rem;
             font-weight: normal;
-            color: $content-font-color;
+            color: $content-fontColor;
 
             &__clear {
                 float: right;

@@ -56,14 +56,14 @@ export default {
     &__title {
       line-height: .22rem;
       font-size: .16rem;
-      color: $content-font-color;
+      color: $content-fontColor;
     }
 
     &__tags {
       margin: .08rem 0 0 0;
       line-height: .18rem;
       font-size: .13rem;
-      color: $content-font-color;
+      color: $content-fontColor
 
     }
 
@@ -92,7 +92,7 @@ export default {
       margin: .04rem 0 0 0;
       line-height: .17rem;
       font-size: .12rem;
-      color: $content-font-color;
+      color: $content-fontColor;
       @include ellipsis;
     }
     &__price {

@@ -73,11 +73,11 @@ export default {
       margin: .16rem 0 .02rem 0;
       font-size: .18rem;
       font-weight: normal;
-      color: $content-font-color;
+      color: $content-fontColor;
     }
-    a {
-      text-decoration: none;
-    }
+    // a {
+    //   text-decoration: none;
+    // }
   }
 
 </style>

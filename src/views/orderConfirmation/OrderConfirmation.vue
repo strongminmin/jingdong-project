@@ -196,7 +196,7 @@ export default {
 //             margin: 0;
 //             line-height: .2rem;
 //             font-size: .14rem;
-//             color: $content-font-color;
+//             color: $content-fontColor;
 //             @include ellipsis;
 //         }
 

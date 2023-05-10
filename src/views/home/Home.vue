@@ -21,13 +21,15 @@ export default {
 
 <!-- scoped 表示样式只对本组件内的 class 标签有用 -->
   <style lang="scss" scoped>
+ @import '../../style/mixins.scss';
   .wrapper {
     overflow-y: auto;
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: .5rem;
-    right: 0;
+    // position: absolute;
+    // left: 0;
+    // top: 0;
+    // bottom: .5rem;
+    // right: 0;
+    @include fix-content;
     padding: 0 .18rem .2rem .18rem;
     // background: green;
   }

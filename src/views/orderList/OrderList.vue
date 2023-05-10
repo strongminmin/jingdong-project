@@ -37,7 +37,7 @@ const useOrderListEffect = () => {
   const getNearbyList = async () => {
     const result = await get('/api/order')
     // console.log(result, '---result---')
-    console.log(result.data, '---result data---')
+    // console.log(result.data, '---result data---')
     if (result?.errno === 0 && result?.data?.length) {
       const orderList = result.data
       orderList.forEach((order) => {
@@ -74,25 +74,23 @@ export default {
 </script>
 <style lang="scss" scoped>
 @import '../../style/viriables.scss';
+@import '../../style/mixins.scss';
 
 .wrapper {
     overflow-y: auto;
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: .5rem;
-    right: 0;
-    background: rgb(248, 248, 248);
+    // position: absolute;
+    // left: 0;
+    // top: 0;
+    // bottom: .5rem;
+    // right: 0;
+    @include fix-content;
+    background: $darkBgColor;
     // padding: 0 .18rem .2rem .18rem;
     // background: green;
 }
 
 .title {
-    line-height: .44rem;
-    background: $bgColor;
-    color: $content-font-color;
-    font-size: .16rem;
-    text-align: center;
+    @include title;
 }
 
 .orders {}
@@ -105,7 +103,7 @@ export default {
     &__title {
         line-height: .22rem;
         font-size: .16rem;
-        color: $content-font-color;
+        color: $content-fontColor;
         margin-bottom: .16rem;
     }
 
@@ -143,7 +141,7 @@ export default {
         &__count {
             line-height: .14rem;
             font-size: .12rem;
-            color: $content-font-color;
+            color: $content-fontColor;
             text-align: center;
         }
 
