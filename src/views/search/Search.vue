@@ -82,7 +82,7 @@ export default {
         history.value.push(searchValue)
         localStorage.history = JSON.stringify(history.value)
       }
-      router.push(`searchList?keyword=${searchValue}`)
+      router.push(`/searchList?keyword=${searchValue}`)
     }
     // 当清理历史记录时执行的操作
     const handleClearHistoryClick = () => {

@@ -16,6 +16,7 @@ const routes = [
     // component: Login,
     // 使用异步路由会让代码执行更快，因此将上面一行代码改成下面
     component: () => import(/* webpackChunkName: "login" */ '../views/login/Login'),
+    // 路由独享的守卫
     // 访问 Login页面之前才会执行 下面的 beforeEnter 方法
     beforeEnter (to, from, next) {
       // const isLogin = localStorage.isLogin
@@ -108,6 +109,7 @@ const router = createRouter({
   routes
 })
 
+// 全局前置守卫
 router.beforeEach((to, from, next) => {
   // to 表示即将访问的页面
   // from 表示从哪个页面跳转来的

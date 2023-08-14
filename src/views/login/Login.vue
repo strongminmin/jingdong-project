@@ -45,8 +45,8 @@ import Toast, { useToastEffect } from '../../components/Toast.vue'
 const useLoginEffect = (showToast) => {
   const router = useRouter()
   const data = reactive({
-    username: '',
-    password: ''
+    username: 'root',
+    password: '123456'
   })
   const handleLogin = async () => {
     try {
