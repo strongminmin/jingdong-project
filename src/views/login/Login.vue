@@ -72,7 +72,7 @@ const useLoginEffect = (showToast) => {
   const { username, password } = toRefs(data)
   return { username, password, handleLogin }
 }
-// 处理登录跳转
+// 处理注册跳转
 const useRegisterEffect = () => {
   const router = useRouter()
   const handleRegisterClick = () => {
